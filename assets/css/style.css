@@ -489,7 +489,108 @@ main {
 
 
 
+/*-----------------------------------*\
+  #HOME
+\*-----------------------------------*/
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
 
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.home_title {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--vegas-gold);
+
+}
+
+
+.section__text__p1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--light-gray);
+}
+
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(121, 121, 121) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgba(2, 41, 83, 0.138);
+  color: white;
+}
+
+.CV_download {
+  color: var(--light-gray-70); /* Replace with the color you want */
+}
+
+
+.CV_download:hover {
+  transition: all 300ms ease;
+  color: white; /* Replace with the color you want */
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
 
 /*-----------------------------------*\
   #ABOUT

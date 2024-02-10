@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Daniel Hong</title>
 
   <!--
     - favicon
@@ -42,13 +42,13 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/circular_profile_pic_background.png" alt="Profile Picture" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Daniel Hong">Daniel Hong</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Upcoming Engineer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -74,7 +74,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              <a href="mailto:danielh.uoft@gmail.com" class="contact-link">danielh.uoft@gmail.com</a>
             </div>
 
           </li>
@@ -82,13 +82,13 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title">Linkedin</p>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              <a href="https://www.linkedin.com/in/danielh-hong" class="contact-link">Linkedin</a>
             </div>
 
           </li>
@@ -102,7 +102,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23">June 23, 1982</time>
+              <time datetime="1982-06-23">December 5th, 2005</time>
             </div>
 
           </li>
@@ -116,7 +116,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Sacramento, California, USA</address>
+              <address>Toronto, Ontraio, Canada</address>
             </div>
 
           </li>
@@ -151,10 +151,6 @@
 
     </aside>
 
-
-
-
-
     <!--
       - #main-content
     -->
@@ -169,8 +165,14 @@
 
         <ul class="navbar-list">
 
+        
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>About</button>
           </li>
 
           <li class="navbar-item">
@@ -181,10 +183,15 @@
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
+
+
+          <!--
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li>
-
+          
+        
+        -->
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
@@ -193,15 +200,48 @@
 
       </nav>
 
+      <!--
+        - #HOME
+      -->
+      
+<!-- X O X O X O X O X O X O X O X O X O X X O X O X O X O X O X O X O X O X O X -->
+
+      <article class="about  active" data-page="home"> 
+        <header>
+          <h2 class="h2 article-title">Home</h2>
+        </header>
+
+
+        <section id="profile">
+          <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="home_title">Daniel Hong</h1>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/other_files/resume.pdf')"
+              >
+                <p class="CV_download">Download CV</p>
+              </button>
+              <button class="btn btn-color-1" onclick="window.open('https://www.linkedin.com/in/danielh-hong', '_blank')">
+                <p class="Linkedin">Linkedin</p>
+              </button>
+            </div>
 
 
 
+
+          </div>
+        </section>
+      </article>
+      
+<!-- X O X O X O X O X O X O X O X O X O X X O X O X O X O X O X O X O X O X O X -->
 
       <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -222,6 +262,7 @@
             message and identity in the most creative way. I created web design for many famous brand companies.
           </p>
         </section>
+
 
 
         <!--
@@ -308,6 +349,7 @@
           - testimonials
         -->
 
+        <!--
         <section class="testimonials">
 
           <h3 class="h3 testimonials-title">Testimonials</h3>
@@ -405,7 +447,7 @@
           </ul>
 
         </section>
-
+        -->
 
         <!--
           - testimonials modal
@@ -456,6 +498,7 @@
           - clients
         -->
 
+        <!--
         <section class="clients">
 
           <h3 class="h3 clients-title">Clients</h3>
@@ -501,10 +544,8 @@
           </ul>
 
         </section>
-
+        -->
       </article>
-
-
 
 
 
@@ -945,6 +986,7 @@
         - #BLOG
       -->
 
+      <!--
       <article class="blog" data-page="blog">
 
         <header>
@@ -1129,7 +1171,7 @@
 
       </article>
 
-
+      -->
 
 
 
@@ -1195,6 +1237,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 
