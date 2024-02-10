@@ -25,7 +25,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
+
+
 <body>
+  <style>
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles-js" style="position:fixed; width:100%; height:100%; z-index:0;"></div>
+  <script src="./assets/js/particles-config.js"></script>
+</body>
+
+
+
 
   <!--
     - #MAIN
@@ -42,7 +62,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/circular_profile_pic_background.png" alt="Profile Picture" width="80">
+          <img src="./assets/images/profile_pic.png" alt="Profile Picture" width="80">
         </figure>
 
         <div class="info-content">
@@ -66,31 +86,37 @@
         <ul class="contacts-list">
 
           <li class="contact-item">
-
             <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+              <div class="icon-box-clickable">
+                <a href="mailto:danielh.uoft@gmail.com">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </a>
+              </div>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:danielh.uoft@gmail.com" class="contact-link">danielh.uoft@gmail.com</a>
+              <div class="contact-info-clickable">
+                <p class="contact-title">Email</p>
+                <a href="mailto:danielh.uoft@gmail.com" class="contact-link">danielh.uoft@gmail.com</a>
+              </div>
             </div>
-
           </li>
 
           <li class="contact-item">
-
             <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <div class="icon-box-clickable">
+                <a href="https://www.linkedin.com/in/danielh-hong">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </div>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Linkedin</p>
-
-              <a href="https://www.linkedin.com/in/danielh-hong" class="contact-link">Linkedin</a>
+              <div class="contact-info-clickable">
+                <p class="contact-title">Linkedin</p>
+                <a href="https://www.linkedin.com/in/danielh-hong" class="contact-link">Linkedin</a>
+              </div>
             </div>
-
           </li>
 
           <li class="contact-item">
@@ -125,6 +151,7 @@
 
         <div class="separator"></div>
 
+      <!--
         <ul class="social-list">
 
           <li class="social-item">
@@ -146,7 +173,7 @@
           </li>
 
         </ul>
-
+      -->
       </div>
 
     </aside>
@@ -154,6 +181,7 @@
     <!--
       - #main-content
     -->
+    
 
     <div class="main-content">
 
@@ -179,9 +207,11 @@
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 
+          <!--
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+          -->
+          
 
 
 
@@ -217,15 +247,21 @@
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="home_title">Daniel Hong</h1>
             <div class="btn-container">
+
               <button
                 class="btn btn-color-2"
                 onclick="window.open('./assets/other_files/resume.pdf')"
               >
                 <p class="CV_download">Download CV</p>
               </button>
-              <button class="btn btn-color-1" onclick="window.open('https://www.linkedin.com/in/danielh-hong', '_blank')">
+
+              <button 
+                class="btn btn-color-1" 
+                onclick="window.open('https://www.linkedin.com/in/danielh-hong', '_blank')"
+              >
                 <p class="Linkedin">Linkedin</p>
               </button>
+
             </div>
 
 
@@ -249,17 +285,44 @@
 
         <section class="about-text">
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            Hey! My name is Daniel and I'm an Engineering Science Student at the Univeresity of Toronto.
+            Life to me is all about pushing limits and discovering the best version of myself. What I love about
+            engineering is learning about how things and applying what I learn to innovative tangible items that   
+            bring that knowledge to life.
+
+          </p>
+
+          <br>
+          <hr>
+          <br>
+          <p></p>
+
+          <p>
+            Currently, I have strong interests in aerospace engineering,
+            robotics, machine learning, and software development, and am hoping to specialize 
+            in one of these fields come my third year. 
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            As of now, I am an active member 
+            of UofT's Aerospace Design Team (UTAT) and Wind Design Team (UWind) where I am developing my hands on skills.
+            In UTAT, I am currently working on the design of a quadcopter and have so far helped design the stringers and bulkheads of the 
+            fuselage using Solidworks. In UTWind, I have designed the nacelle of the wind turbine, which will
+            house the generator and gearbox.
+          </p>
+          
+          <p>
+            Outside of engineering, I am a musician, athlete, and hobbyiest photographer. In fact, I have over 10 
+            years of experience 
+            playing the piano and violin, and was a member of UofT's Varsity Track
+            and Field Team. At my best, I cleared 190 cm in high jump and achieved top 30 national rankings. 
+            Unfortunately, as of now I am recovering from a hamstring tear.
+          </p>  
+
+          <p>
+            I truly believe that life is all about creating the best version of yourself, and that beliefs
+            extends to all facets of my life. I'm always trying to improve my health, my mind, and my abilities,
+            and will continue to do so for the rest of my life. 
           </p>
         </section>
 
@@ -271,22 +334,21 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title">What i'm currently working on</h3>
 
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <ion-icon name="build-outline" size="large"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title">Arduino</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  Learning how to use Arduino to create a variety of projects.
                 </p>
               </div>
 
@@ -295,14 +357,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <ion-icon name="laptop-outline" size="large"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Web development</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Improving my web developement skills. Learning frameworks like react.
                 </p>
               </div>
 
@@ -311,14 +373,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <ion-icon name="code-slash-outline" size="large"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">C and C++</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Learning how to use C and C++ to create a variety of projects.
                 </p>
               </div>
 
@@ -327,14 +389,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <ion-icon name="pulse-outline" size="large"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">Circuitry</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Learning how to analyze, manipulate, and create circuits.
                 </p>
               </div>
 
@@ -573,42 +635,42 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title">University of Toronto</h4>
 
-              <span>2007 — 2008</span>
+              <span>2023 — Current</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Pursuing an undergraduate
+                B.A.Sc. in Engineering Science, one of the most prestigious engineering programs in Canada.
+                Expected to graduate in 2027 + PEY. 
+                <ul style="padding-left: 20px; color: rgb(72, 72, 72)">
+                  <li>- Frank Howard $5,000 Admission Scholarship</li>
+                  <li>- University of Toronto National Book Award Recipient</li>
+                  <li>- 4.0 GPA </li>
+                </ul>
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <h4 class="h4 timeline-item-title">Bloor Collegiate Institute</h4>
 
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
+              <span>2019 — 2023</span>            
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                Graduated from Bloor Collegiate Institute's TOPS program, one of the most prestigious 
+                high school programs in Canada.
+                <ul style="padding-left: 20px; color: rgb(72, 72, 72);">
+                  <li>- Two-year Student Council Member</li>
+                  <li>- Founder of Newspress Club (50+ members) in 2022</li>
+                  <li>- AP Physics B, AP Physics C, Digital Design Subject Awards</li>
+                  <li>- Graduating athlete of the year scholarship</li>
+                  <li>- Track and Field OFSAA Qualifier, Varsity Volleyball MVP, Varsity Ultimate MVP, 2022-2023 D2 Basketball Champion</li>
+                  <li>- 98% average</li>
+                </ul>
               </p>
+             
 
             </li>
 
@@ -630,42 +692,52 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">UTAT Member</h4>
 
-              <span>2015 — Present</span>
+              <span>2015 — Current</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                Designed the bulkheads and stringers for the fuselage of a Quadcopter. 
+                Optimized the design by running stress simulations. 
+                The quadcopter will be competing in the national Unmanned Aerial Systems competition.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title">UWind Member</h4>
 
-              <span>2013 — 2015</span>
+              <span>2023 — Current</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Modeled and designed the nacelle of a wind turbine using Solidworks in
+                preparation for the 2024 International Small Wind Turbine Contest in Sweden.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <h4 class="h4 timeline-item-title">Tutor</h4>
 
-              <span>2010 — 2013</span>
+              <span>2022 — Current</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                I work one-on-one with my high school clients to improve their mathematics and physics skills.
+                Subjects include calculus, mechanical physics, and functions.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Spirit of Math Assistant Teacher</h4>
+
+              <span>2022 — 2023</span>
+
+              <p class="timeline-text">
+                Led instructional exercises and worked one-on-one with 6th-grade classes 2hrs/week.
               </p>
 
             </li>
@@ -673,6 +745,9 @@
           </ol>
 
         </section>
+
+
+
 
         <section class="skill">
 
@@ -683,7 +758,20 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
+                <h5 class="h5">Python</h5>
+                <data value="95">95%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
                 <data value="80">80%</data>
               </div>
 
@@ -696,20 +784,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
+                <h5 class="h5">C (programming language)</h5>
                 <data value="90">90%</data>
               </div>
 
@@ -722,12 +797,64 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+                <h5 class="h5">HTML CSS Javascript</h5>
+                <data value="70">70%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Matlab</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe Suite (Photoshop, Illustratrator, After Effects, Premiere Pro, Indesign)</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Solid Works</h5>
+                <data value="75">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Blender</h5>
+                <data value="40">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
               </div>
 
             </li>
@@ -1187,9 +1314,7 @@
 
         <section class="mapbox" data-mapbox>
           <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.9097720768!2d-79.54286797110714!3d43.718370958257054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1707596948325!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </figure>
         </section>
 
@@ -1197,8 +1322,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
-
+          <form action="https://formspree.io/f/xqkrprok" method="POST" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
@@ -1207,7 +1331,7 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
@@ -1230,14 +1354,13 @@
   <!--
     - custom js link
   -->
+  <div id="particle-container"></div>
   <script src="./assets/js/script.js"></script>
-
   <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 </body>
 
