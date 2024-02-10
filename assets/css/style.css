@@ -297,6 +297,8 @@ article.active {
   position: absolute;
   pointer-events: none;
   animation: fadeOut 1s linear forwards; /* Add this line */
+  z-index: 9999; /* Add this line */
+
 }
 
 

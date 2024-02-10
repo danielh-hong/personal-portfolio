@@ -1,41 +1,5 @@
 'use strict';
 
-document.addEventListener('mousemove', function(e) {
-  const container = document.getElementById('particle-container');
-
-  // Create 0.5 particles at a time
-  for (let i = 0; i < 1; i++) {
-    const particle = document.createElement('ion-icon');
-    particle.classList.add('particle');
-    particle.setAttribute('name', 'star'); // Set the icon
-
-    // Add a larger random offset to each particle's position
-    const x = e.pageX + Math.random() * 20 - 10;
-    const y = e.pageY + Math.random() * 20 - 10;
-
-    // Set random size
-    const size = Math.random() * 5 + 1; 
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.fontSize = `${size}px`;
-
-    // Set random color
-    const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'orange']; // Add more colors if you want
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.color = color;
-
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
-
-    container.appendChild(particle);
-
-    setTimeout(() => {
-      particle.remove();
-    }, 750); // Remove the particle after 1 second
-  }
-});
-
-
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -192,3 +156,39 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+document.addEventListener('mousemove', function(e) {
+  const container = document.getElementById('particle-container');
+
+  // Create 0.5 particles at a time
+  for (let i = 0; i < 1; i++) {
+    const particle = document.createElement('ion-icon');
+    particle.classList.add('particle');
+    particle.setAttribute('name', 'star'); // Set the icon
+
+    // Add a larger random offset to each particle's position
+    const x = e.pageX + Math.random() * 20 - 10;
+    const y = e.pageY + Math.random() * 20 - 10;
+
+    // Set random size
+    const size = Math.random() * 5 + 1; 
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.fontSize = `${size}px`;
+
+    // Set random color
+    const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'orange']; // Add more colors if you want
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    particle.style.color = color;
+
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+
+    container.appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 750); // Remove the particle after 1 second
+  }
+});
