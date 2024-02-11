@@ -303,6 +303,61 @@ article.active {
 
 
 /*-----------------------------------*\
+  #MOUSE CLICK ANIMATION!
+\*-----------------------------------*/
+#click-effect-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+
+.click-effect {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: click-effect 1s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.click-effect::before {
+  content: "";
+  position: absolute;
+  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  background: linear-gradient(45deg, dodgerblue, deepskyblue, cyan);
+  border-radius: inherit;
+  z-index: -1;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes click-effect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
 
@@ -310,6 +365,9 @@ main {
   margin: 15px 12px;
   margin-bottom: 75px;
   min-width: 259px;
+  position: relative; /* or whatever your current position value is */    
+  z-index: 1; /* or any number lower than 9999 */
+  
 }
 
 
@@ -544,17 +602,13 @@ main {
 }
 
 @keyframes color-change {
-  0% { color: rgb(47, 144, 255); }
-  25% { color: rgb(54, 139, 236); }
-  50% { color: rgb(19, 134, 206); }
-  75% { color: rgb(0, 174, 255); }
-  100% { color: rgb(41, 186, 239); }
+  0%, 100% { color: rgb(121, 184, 255); }
+  50% { color: rgb(41, 186, 239); }
 }
-
 .home_title {
   text-align: center;
   font-size: 5rem;
-  animation: color-change 15s infinite;;
+  animation: color-change 8s infinite;;
 
 }
 
@@ -620,7 +674,7 @@ main {
 
 .btn-color-1:hover p,
 .btn-color-2:hover p {
-  color: rgb(0, 23, 50);
+  color: rgb(24, 142, 238);
   cursor: pointer;
 
 }
@@ -1966,6 +2020,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
+    opacity: 95%;
     max-width: 1200px;
     margin-inline: auto;
     display: flex;

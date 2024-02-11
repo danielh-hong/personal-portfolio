@@ -157,38 +157,55 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+let counter = 0;
 
 document.addEventListener('mousemove', function(e) {
-  const container = document.getElementById('particle-container');
+  counter++;
 
-  // Create 0.5 particles at a time
-  for (let i = 0; i < 1; i++) {
-    const particle = document.createElement('ion-icon');
-    particle.classList.add('particle');
-    particle.setAttribute('name', 'star'); // Set the icon
+  if (counter % 3 === 0) { // only create a particle on every other mousemove event
+    const container = document.getElementById('particle-container');
 
-    // Add a larger random offset to each particle's position
-    const x = e.pageX + Math.random() * 20 - 10;
-    const y = e.pageY + Math.random() * 20 - 10;
+    // Create 0.5 particles at a time
+    for (let i = 0; i < 1; i++) {
+      const particle = document.createElement('ion-icon');
+      particle.classList.add('particle');
+      particle.setAttribute('name', 'star'); // Set the icon
 
-    // Set random size
-    const size = Math.random() * 5 + 1; 
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.fontSize = `${size}px`;
+      // Add a larger random offset to each particle's position
+      const x = e.pageX + Math.random() * 20 - 10;
+      const y = e.pageY + Math.random() * 20 - 10;
 
-    // Set random color
-    const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'orange']; // Add more colors if you want
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.color = color;
+      // Set random size
+      const size = Math.random() * 7 + 1; 
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.fontSize = `${size}px`;
 
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
+      // Set random color
+      const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'orange']; // Add more colors if you want
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.color = color;
 
-    container.appendChild(particle);
+      particle.style.left = `${x}px`;
+      particle.style.top = `${y}px`;
 
-    setTimeout(() => {
-      particle.remove();
-    }, 750); // Remove the particle after 1 second
+      container.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 750); // Remove the particle after 1 second
+    }
   }
+});
+
+document.addEventListener('click', function(e) {
+  const effect = document.createElement('div');
+  effect.classList.add('click-effect');
+  effect.style.top = `${e.clientY - 50}px`; // subtract half the width/height to center the effect
+  effect.style.left = `${e.clientX - 50}px`; // subtract half the width/height to center the effect
+  document.getElementById('click-effect-container').appendChild(effect);
+
+  setTimeout(() => {
+    effect.remove();
+  }, 1000);
 });
