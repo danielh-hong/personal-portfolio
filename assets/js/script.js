@@ -198,6 +198,8 @@ document.addEventListener('mousemove', function(e) {
   }
 });
 
+
+// Circle button effect on click
 document.addEventListener('click', function(e) {
   const effect = document.createElement('div');
   effect.classList.add('click-effect');
@@ -209,3 +211,4 @@ document.addEventListener('click', function(e) {
     effect.remove();
   }, 1000);
 });
+
