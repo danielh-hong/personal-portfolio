@@ -162,7 +162,7 @@ let counter = 0;
 document.addEventListener('mousemove', function(e) {
   counter++;
 
-  if (counter % 3 === 0) { // only create a particle on every other mousemove event
+  if (counter % 4 === 0) { // only create a particle on every other mousemove event
     const container = document.getElementById('particle-container');
 
     // Create 0.5 particles at a time
@@ -193,22 +193,50 @@ document.addEventListener('mousemove', function(e) {
 
       setTimeout(() => {
         particle.remove();
-      }, 750); // Remove the particle after 1 second
+      }, 750); // Remove the particle after .750 second
     }
   }
 });
 
 
-// Circle button effect on click
+
+// Click effect
+var colors = ['dodgerblue', 'deepskyblue', 'cyan', 'magenta', 'yellow', 'lime'];
+
 document.addEventListener('click', function(e) {
+  var color1 = colors[Math.floor(Math.random() * colors.length)];
+  var color2 = colors[Math.floor(Math.random() * colors.length)];
+  var color3 = colors[Math.floor(Math.random() * colors.length)];
+
   const effect = document.createElement('div');
   effect.classList.add('click-effect');
   effect.style.top = `${e.clientY - 50}px`; // subtract half the width/height to center the effect
   effect.style.left = `${e.clientX - 50}px`; // subtract half the width/height to center the effect
+
+  var style = document.createElement('style');
+  style.innerHTML = `
+    .click-effect::before {
+      background: linear-gradient(45deg, ${color1}, ${color2}, ${color3});
+    }
+  `;
+  document.head.appendChild(style);
+
   document.getElementById('click-effect-container').appendChild(effect);
 
   setTimeout(() => {
     effect.remove();
   }, 1000);
 });
+
+/* make height of home same as sidebar */
+/*
+window.onload = function() {
+  var sidebar = document.querySelector('.sidebar');
+  var home = document.querySelector('.home');
+  home.style.height = window.getComputedStyle(sidebar).height;
+}
+not needed anymore with new fixes
+*/ 
+
+
 
