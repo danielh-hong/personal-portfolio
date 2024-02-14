@@ -144,14 +144,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function (event) {
     event.preventDefault(); // prevent the default action
 
+    const targetId = this.getAttribute('href').substring(1); // remove the '#' symbol
+
     for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+      if (targetId === pages[i].id) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
 
         // update the hash part of the URL
-        window.location.hash = this.innerHTML.toLowerCase();
+        window.location.hash = targetId;
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
@@ -160,6 +162,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+// when the hash changes, update the active navigation link
+window.addEventListener("hashchange", function () {
+  const hash = window.location.hash; // get the new hash from the URL
+
+  for (let i = 0; i < navigationLinks.length; i++) {
+    if (navigationLinks[i].getAttribute('href') === hash) {
+      navigationLinks[i].classList.add("active");
+      pages[i].classList.add("active");
+    } else {
+      navigationLinks[i].classList.remove("active");
+      pages[i].classList.remove("active");
+    }
+  }
+});
 
 
 
