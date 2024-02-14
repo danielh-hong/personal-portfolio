@@ -15,9 +15,15 @@
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
   <!--
-    - custom css link
+    - css styling link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - fancybox link for Youtube Videos
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 
   <!--
     - google font link
@@ -91,8 +97,8 @@
 
         <ul class="contacts-list">
 
-          <li class="contact-item">
-            <div class="icon-box">
+          <li class="contact-item"> 
+            <div class="icon-box"> <!-- Icon Clickable -->
               <div class="icon-box-clickable">
                 <a href="mailto:danielh.uoft@gmail.com">
                   <ion-icon name="mail-outline"></ion-icon>
@@ -100,7 +106,7 @@
               </div>
             </div>
 
-            <div class="contact-info">
+            <div class="contact-info"> <!-- Text clickable -->
               <div class="contact-info-clickable">
                 <p class="contact-title">Email</p>
                 <a href="mailto:danielh.uoft@gmail.com" class="contact-link">danielh.uoft@gmail.com</a>
@@ -108,7 +114,7 @@
             </div>
           </li>
 
-          <li class="contact-item">
+          <li class="contact-item"> <!-- Icon Clickable -->
             <div class="icon-box">
               <div class="icon-box-clickable">
                 <a href="https://www.linkedin.com/in/danielh-hong">
@@ -117,7 +123,7 @@
               </div>
             </div>
 
-            <div class="contact-info">
+            <div class="contact-info"> <!-- Text Clickable -->
               <div class="contact-info-clickable">
                 <p class="contact-title">Linkedin</p>
                 <a href="https://www.linkedin.com/in/danielh-hong" class="contact-link">Linkedin</a>
@@ -125,6 +131,7 @@
             </div>
           </li>
 
+          <!--
           <li class="contact-item">
 
             <div class="icon-box">
@@ -138,6 +145,23 @@
             </div>
 
           </li>
+        -->
+        <li class="contact-item">
+          <div class="icon-box">
+            <div class="icon-box-clickable">
+              <a href="https://www.youtube.com/channel/UCtP3sR2AgyXhzXxyjUaZDQA">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-clickable">
+              <p class="contact-title">Youtube</p>
+              <a href="https://www.youtube.com/channel/UCtP3sR2AgyXhzXxyjUaZDQA" class="contact-link">Youtube Channel</a>
+            </div>
+          </div>
+        </li>
 
           <li class="contact-item">
 
@@ -189,12 +213,34 @@
     -->
     
 
-    <div class="main-content">      
+    <div class="main-content">     
+      <!--
+        - #NEW NAVBAR WITH LINKS
+      -->  
+      
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link active" href="#home" data-nav-link>Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#about" data-nav-link>About</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#resume" data-nav-link>Resume</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#portfolio" data-nav-link>Portfolio</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#contact" data-nav-link>Contact</a>
+          </li>
+        </ul>
+      </nav>
+
 
       <!--
-        - #NAVBAR
-      -->
-
+        - #NAVBAR OLD -> remember to get rid of blog
       <nav class="navbar">
 
         <ul class="navbar-list">
@@ -213,21 +259,17 @@
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 
-          <!--
+
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
-          -->
-          
+          </li>
+      
 
-
-
-          <!--
+          DELETE BLOG IF FALL BACK ON THIS VERSION
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li>
-          
         
-        -->
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
@@ -235,6 +277,8 @@
         </ul>
 
       </nav>
+      -->
+
 
       <!--
         - #HOME
@@ -884,37 +928,35 @@
       -->
 
       <article class="portfolio" data-page="portfolio">
-
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
 
         <section class="projects">
-
           <ul class="filter-list">
-
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Web design</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Applications</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Web development</button>
             </li>
-
+            <li class="filter-item">
+              <button data-filter-btn>Engineering</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Videos</button>
+            </li>
           </ul>
 
           <div class="filter-select-box">
-
+            
             <button class="filter-select" data-select>
-
               <div class="select-value" data-selecct-value>Select category</div>
 
               <div class="select-icon">
@@ -924,44 +966,52 @@
             </button>
 
             <ul class="select-list">
-
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Web design</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Applications</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Web development</button>
               </li>
-
+              <li class="select-item">
+                <button data-select-item>Engineering</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Videos</button>
+              </li>
             </ul>
-
           </div>
 
           <ul class="project-list">
-
             <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Finance</h3>
-
                 <p class="project-category">Web development</p>
+              </a>
+            </li>
 
+            <!-- Legend of Pakicetus Video Link-->
+            <li class="project-item active" data-filter-item data-category="videos">
+              <a data-fancybox href="https://youtu.be/8I9feeSzREQ">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.jpg" alt="Videos" loading="lazy">
+                </figure>
+                <h3 class="project-title">The Legend of Pakicetus (Animated Short)</h3>
+                <p class="project-category">Videos</p>
               </a>
             </li>
 
@@ -1366,12 +1416,18 @@
   -->
   <div id="particle-container"></div>
   <script src="./assets/js/script.js"></script>
+
   <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <!-- Add jQuery and fancyBox JS for Youtube Link Thing-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 
 
 </body>

@@ -250,3 +250,8 @@ window.onload = function() {
     home.style.height = "flex"; // For example, reset the height to auto
   }
 }
+
+/* Video Player */
+document.addEventListener('DOMContentLoaded', () => {
+  const player = new Plyr('div[data-plyr]');
+});
