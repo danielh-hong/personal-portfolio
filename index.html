@@ -286,7 +286,8 @@
       
 <!-- X O X O X O X O X O X O X O X O X O X X O X O X O X O X O X O X O X O X O X -->
 
-      <article class="home  active" data-page="home"> 
+      <article id="home" class="home active" data-page="home">
+
         <header>
           <h2 class="h2 article-title">Home</h2>
         </header>
@@ -813,7 +814,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Python</h5>
-                <data value="80">85%</data>
+                <data value="85">85%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -826,7 +827,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Java</h5>
-                <data value="80">80%</data>
+                <data value="65">65%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -839,11 +840,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">C (programming language)</h5>
-                <data value="60">60%</data>
+                <data value="55">55%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
+                <div class="skill-progress-fill" style="width: 55%;"></div>
               </div>
 
             </li>
@@ -851,12 +852,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">HTML CSS Javascript</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">HTML CSS Javascript (Webdev)</h5>
+                <data value="65">65%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
+                <div class="skill-progress-fill" style="width: 65%;"></div>
               </div>
 
             </li>
@@ -865,6 +866,19 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Matlab</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe Suite (Photoshop, Illustratrator, After Effects, Premiere Pro, Indesign)</h5>
                 <data value="70">70%</data>
               </div>
 
@@ -877,25 +891,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Adobe Suite (Photoshop, Illustratrator, After Effects, Premiere Pro, Indesign)</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
                 <h5 class="h5">Solid Works</h5>
-                <data value="75">75%</data>
+                <data value="50">50%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
+                <div class="skill-progress-fill" style="width: 50%;"></div>
               </div>
 
             </li>
@@ -988,66 +989,136 @@
           </div>
 
           <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-                <h3 class="project-title">Finance</h3>
-                <p class="project-category">Web development</p>
-              </a>
-            </li>
+
 
             <!-- Legend of Pakicetus Video Link-->
             <li class="project-item active" data-filter-item data-category="videos">
-              <a data-fancybox href="https://youtu.be/8I9feeSzREQ">
+              <a data-fancybox data-caption="
+              The Legend of Pakicetus is an animated short film that I created in 2023. I made it 
+              using after effects for the animations, illustrator for the graphics, photoshop for the 
+              photo editing, premiere pro for the video editing, and media encoder for the final render.
+              The film is about the first whale on land, the Pakicetus. Note tat the video is for 
+              entertainment purposes only and is NOT Scientifically accurate!
+              " href="https://youtu.be/8I9feeSzREQ">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-1.jpg" alt="Videos" loading="lazy">
+                  <img src="./assets/images/project_thumbnails/pakicetus_thumbnail.png" alt="video thumbnail" loading="lazy">
                 </figure>
                 <h3 class="project-title">The Legend of Pakicetus (Animated Short)</h3>
                 <p class="project-category">Videos</p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
+            <!-- The Perception of Pain-->
+            <li class="project-item active" data-filter-item data-category="videos">
+              <a data-fancybox data-caption="
+              Nociception is a video I made for the Junior Breakthrough Challenge in 2021. It is an
+              mixed-medium, animated video about how pain is perceived by the body. I made it 
+              using illustrator, photoshop, after effects, and premiere pro. The video came
+              top 10% in the competition.
+              " href="https://youtu.be/8I9feeSzREQ">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/project_thumbnails/nociception_thumbnail.png" alt="video thumbnail" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
+                <h3 class="project-title">Nociception - The Perception of Pain</h3>
+                <p class="project-category">Videos</p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
+            <!-- Biking-->
+            <li class="project-item active" data-filter-item data-category="videos">
+              <a data-fancybox data-caption="
+              Biking - The Best Form of Transportation is a video I made back in 2022. It is a
+              mixed-medium, animated video that uses recorded footage, animations, and stock footage.
+              I truly believe that biking is the best form of transportation, and try to bike 
+              as much as possible (even in the heart of winter). I used  
+              illustrator, photoshop, after effects, and premiere pro for this piece.
+              " href="https://youtu.be/y_c79vshk14?si=Rt8v7-Tx5k_8oc_u">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="./assets/images/project_thumbnails/biking_thumbnail.png" alt="video thumbnail" loading="lazy">
                 </figure>
+                <h3 class="project-title">Biking - The Best Form of City Transportation</h3>
+                <p class="project-category">Videos</p>
+              </a>
+            </li>
 
-                <h3 class="project-title">Fundo</h3>
+            <!-- Peto's Paradox -->
+            <li class="project-item active" data-filter-item data-category="videos">
+              <a data-fancybox data-caption="
+              Peto's Paradox is a video I made in 2020 for the Junior Breakthrough Challenge. 
+              During this time, I was fascinated by biology, and especially curious about
+              the inner workings of cancer. Inspired by Kurzegasgt, I decided
+              to make a video about the topic. This video placed top 5% internationally, and
+              is one of my most memorable projects. 
 
+              " href="https://youtu.be/2Xf_u02zm8k?si=lyKa23qDK47Q-2AO">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project_thumbnails/petos_paradox.png" alt="video thumbnail" loading="lazy">
+                </figure>
+                <h3 class="project-title">Peto's Paradox</h3>
+                <p class="project-category">Videos</p>
+              </a>
+            </li>
+
+            <!-- Excavator Project Link-->
+            <li class="project-item active" data-filter-item data-category="videos">
+              <a data-fancybox data-caption=
+              "This is my first Engineering Project Ever, and holds a very dear spot in my heart.
+              Made in 5th grade, I still remember the joy after seeing my creation work for the first time.
+              Other than the hydraulics, the excavator is completely made of recycled materials,
+              featuring a shampoo lid bucket and a cardboard body. Please go easy on the 5th grade editing!
+                                              " href="https://youtu.be/JOrUQsLdYow?si=JBFLzW-WEgpy9yk1">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project_thumbnails/excavator_thumbnail.png" alt="video thumbnail" loading="lazy">
+                </figure>
+                <h3 class="project-title">Excavator (My First Ever Project)</h3>
+                <p class="project-category">Videos</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="engineering">
+              <a data-fancybox data-caption="This is my first Solidworks project. It is a model
+              of the 2019 Model Mania design challenge." href="./assets/images/project_thumbnails/model_mania_thumbnail.png">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project_thumbnails/model_mania_thumbnail.png" alt="model mania 2019 CAD screenshot" loading="lazy">
+                </figure>
+                <h3 class="project-title">Model Mania 2019</h3>
+                <p class="project-category">Engineering</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a data-fancybox data-caption="
+              You are currently on my personal website! The website is made with HTML, CSS, and Javascript.
+              I used the particles.js library for the interactive background,
+              FancyBox library for the video display popups, and simple javascript code for the mouse and click
+              animations. The website is based on codewithsadee's github template! (MIT Licensed).
+              You can see my source code on github." href="./assets/images/personal_website_thumbnail.png">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project_thumbnails/personal_website_thumbnail.png" alt="fundo" loading="lazy">
+                </figure>
+                <h3 class="project-title">Personal Website</h3>
                 <p class="project-category">Web design</p>
-
               </a>
             </li>
 

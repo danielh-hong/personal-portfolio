@@ -141,24 +141,31 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+  navigationLinks[i].addEventListener("click", function (event) {
+    event.preventDefault(); // prevent the default action
 
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
+
+        // update the hash part of the URL
+        window.location.hash = this.innerHTML.toLowerCase();
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
     }
-
   });
 }
 
+
+
+
 let counter = 0;
 
+// Mouse particles effect
 document.addEventListener('mousemove', function(e) {
   counter++;
 
@@ -200,7 +207,7 @@ document.addEventListener('mousemove', function(e) {
 
 
 
-// Click effect
+// Click effect for each click
 var colors = ['dodgerblue', 'deepskyblue', 'cyan', 'magenta', 'yellow', 'lime'];
 
 document.addEventListener('click', function(e) {
@@ -239,6 +246,7 @@ not needed anymore with new fixes
 */ 
 
 
+/* Match Side bar height */
 window.onload = function() {
   var sidebar = document.querySelector('.sidebar');
   var home = document.querySelector('.home');
@@ -251,7 +259,3 @@ window.onload = function() {
   }
 }
 
-/* Video Player */
-document.addEventListener('DOMContentLoaded', () => {
-  const player = new Plyr('div[data-plyr]');
-});

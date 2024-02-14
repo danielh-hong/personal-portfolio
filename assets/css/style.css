@@ -1851,6 +1851,30 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
+   /* Video Caption Box Subtle Shadow Settings */
+   .fancybox-caption {
+    font-size: 18px; /* adjust this to change the size of the description */
+    color: #333; /* change the text color */
+    background-color: #f9f9f9; /* change the background color */
+    padding: 10px; /* add some space around the text */
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0); /* add a subtle shadow */
+    position: relative;
+    z-index: 1; /* position text above gradient */
+  }
+  
+  .fancybox-caption::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    z-index: -1000; /* position the gradient below the text */
+
+  }
+
+  
   .article-title { padding-bottom: 20px; }
 
   .filter-select-box { display: none; }
