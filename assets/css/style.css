@@ -1168,26 +1168,29 @@ main {
   }
 }
 
+/* This applies to the scrollbar itself */
+.fancybox-caption::-webkit-scrollbar {
+  width: 8px;
+}
 
-.fancybox-caption::-webkit-scrollbar { width: 10px; } /* adjust this to make the scrollbar thinner */
+/* This applies to the scrollbar track (the part the thumb moves along) */
+.fancybox-caption::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible */
+}
 
-.fancybox-caption::-webkit-scrollbar-track { background: transparent; } /* make the scrollbar track transparent */
-
+/* This applies to the scrollbar thumb (the part you drag) */
 .fancybox-caption::-webkit-scrollbar-thumb {
-  border: 3px solid var(--smoky-black); /* adjust this to make the scrollbar thumb thinner */
-  background: hsla(0, 0%, 100%, 0.1);
-  border-radius: 10px; /* adjust this to match the new scrollbar width */
-  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
-              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  border-radius: 20px; /* Makes the thumb round */
+  border: 2px solid transparent; /* Makes the thumb appear smaller */
+  background-clip: content-box; /* Clips the background to the content box, not the padding box */
 }
 
-.fancybox-caption::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
-
-.fancybox-caption::-webkit-scrollbar-button { height: 60px; }
-
-.fancybox-count {
-  display: none;
+/* This applies when you hover over the scrollbar thumb */
+.fancybox-caption::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white, but less transparent */
 }
+
 /* Filter and Select Box */
 .filter-list { display: none; }
 
