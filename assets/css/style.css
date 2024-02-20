@@ -1874,6 +1874,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   }
 
+
+  .fancybox-navigation .fancybox-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .fancybox-navigation .fancybox-button svg {
+    width: 30px;
+    height: 30px;
+  }
   
   .article-title { padding-bottom: 20px; }
 
