@@ -1133,27 +1133,18 @@ main {
 \*-----------------------------------*/
 
 
-/* Video Caption Box Subtle Shadow Settings */
-.fancybox-caption {
-  font-size: 18px; /* adjust this to change the size of the description */
-  color: #333; /* change the text color */
-  background-color: #f9f9f9; /* change the background color */
-  padding: 10px; /* add some space around the text */
-  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0); /* add a subtle shadow */
-  position: relative;
-  z-index: 1; /* position text above gradient */
-}
 
 .fancybox-caption::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 60%;
   background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent);
   z-index: -1000; /* position the gradient below the text */
 }
+
 
 .fancybox-navigation .fancybox-button {
   width: 60px;
@@ -1171,13 +1162,9 @@ main {
     line-height: 1.4;
     overflow-y: auto;
     max-height: 150px;
-    margin-top: -100px; /* use a negative margin to move the element up */
-  }
-
-  .image {
-    order: 1;
   }
 }
+
 
 .fancybox-caption::-webkit-scrollbar { width: 10px; } /* adjust this to make the scrollbar thinner */
 
@@ -1195,7 +1182,9 @@ main {
 
 .fancybox-caption::-webkit-scrollbar-button { height: 60px; }
 
-
+.fancybox-count {
+  display: none;
+}
 /* Filter and Select Box */
 .filter-list { display: none; }
 
