@@ -120,7 +120,7 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, a, button, time /*, span */ { display: block; } /* THIS IS SUS */
 
 button {
   font: inherit;
@@ -541,6 +541,7 @@ main {
 \*-----------------------------------*/
 
 .navbar {
+  display: block;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -562,6 +563,7 @@ main {
 }
 
 .navbar-link {
+  display: block;
   color: var(--light-gray);
   font-size: var(--fs-8);
   padding: 20px 7px;
@@ -599,11 +601,6 @@ main {
   font-weight: 600;
 }
 
-@keyframes color-change {
-  0%, 100% { color: rgb(164, 206, 255); }
-  50% { color: rgb(24, 187, 247); }
-}
-
 .section__text__p1 {
   font-size: 2vw;
   text-align: center;
@@ -619,7 +616,18 @@ main {
   white-space: nowrap;
   overflow: hidden; 
   border-right: .15em solid orange; /* The typewriter cursor */
-  animation: typing 5s, blink-caret .9s linear 12, cursor-stop 0s 5s forwards, color-change 8s infinite;
+  background: linear-gradient(90deg, rgb(0, 226, 247), rgb(0, 255, 204), rgb(20, 180, 255), rgb(0, 115, 255), rgb(3, 204, 211));
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: typing 5s, blink-caret .9s linear 12, cursor-stop 0s 5s forwards, gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Styles for viewports less than 1200px wide */
@@ -875,6 +883,7 @@ main {
  * #testimonials-modal
  */
 
+ /*
 .modal-container {
   position: fixed;
   top: 0;
@@ -897,6 +906,7 @@ main {
   pointer-events: all;
   visibility: visible;
 }
+*/
 
 .overlay {
   position: fixed;
@@ -1139,17 +1149,6 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
-
-.fancybox-caption::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1000; /* position the gradient below the text */
-}
-
 .fancybox-navigation .fancybox-button {
   width: 60px;
   height: 60px;
@@ -1165,7 +1164,7 @@ main {
     font-size: 12px;
     line-height: 1.4;
     overflow-y: auto;
-    max-height: 150px;
+    max-height: 30vh; 
   }
 }
 
@@ -1752,6 +1751,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* testimonials modal */
 
+  /*
   .modal-container { padding: 20px; }
 
   .testimonials-modal {
@@ -1781,9 +1781,13 @@ textarea.form-input::-webkit-resizer { display: none; }
     flex-grow: 1;
     width: 35px;
   }
+  */
+
 
   /* clients */
 
+
+  /*
   .clients-list {
     gap: 50px;
     margin: 0 -30px;
@@ -1792,7 +1796,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .clients-item { min-width: calc(33.33% - 35px); }
-
+  */
 
 
   /**
