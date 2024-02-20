@@ -267,16 +267,6 @@ not needed anymore with new fixes
 */ 
 
 
-/* Calculate Image Height for project */
-$(window).on('load', function() {
-  if ($(window).width() < 1200) {
-    var screenHeight = $(window).height();
-    var imageHeight = $('.project-img img').height(); // get the height of the image
-    var maxHeight = screenHeight - imageHeight;
-    $('.fancybox-caption').css('max-height', maxHeight + 'px');
-  }
-});
-
 /* Match Side bar height */
 window.onload = function() {
   var sidebar = document.querySelector('.sidebar');

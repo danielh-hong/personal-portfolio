@@ -1138,7 +1138,7 @@ main {
   font-size: 18px; /* adjust this to change the size of the description */
   color: #333; /* change the text color */
   background-color: #f9f9f9; /* change the background color */
-  padding: -100px; /* add some space around the text */
+  padding: 10px; /* add some space around the text */
   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0); /* add a subtle shadow */
   position: relative;
   z-index: 1; /* position text above gradient */
@@ -1151,6 +1151,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent);
   z-index: -1000; /* position the gradient below the text */
 }
 
@@ -1169,6 +1170,12 @@ main {
     font-size: 10px;
     line-height: 1.4;
     overflow-y: auto;
+    max-height: 150px;
+    margin-top: -100px; /* use a negative margin to move the element up */
+  }
+
+  .image {
+    order: 1;
   }
 }
 
