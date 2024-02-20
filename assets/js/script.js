@@ -257,26 +257,15 @@ document.addEventListener('click', function(e) {
 });
 
 /* make height of home same as sidebar */
-/*
-window.onload = function() {
-  var sidebar = document.querySelector('.sidebar');
-  var home = document.querySelector('.home');
-  home.style.height = window.getComputedStyle(sidebar).height;
-}
-not needed anymore with new fixes
-*/ 
-
-
-/* Match Side bar height */
 window.onload = function() {
   var sidebar = document.querySelector('.sidebar');
   var home = document.querySelector('.home');
 
-  if (window.matchMedia("(min-width: 1250px)").matches) { // 768px is typically the breakpoint for mobile to tablet/desktop. Adjust as needed.
+  if (window.matchMedia("(min-width: 1200px)").matches) { // 768px is typically the breakpoint for mobile to tablet/desktop. Adjust as needed.
     home.style.height = window.getComputedStyle(sidebar).height;
   } else {
     // Perform some other action for mobile view
-    home.style.height = "flex"; // For example, reset the height to auto
+    home.style.height = "70vh"; // For example, reset the height to auto
   }
 }
 

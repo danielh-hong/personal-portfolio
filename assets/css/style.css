@@ -600,9 +600,17 @@ main {
 }
 
 @keyframes color-change {
-  0%, 100% { color: rgb(121, 184, 255); }
-  50% { color: rgb(41, 186, 239); }
+  0%, 100% { color: rgb(164, 206, 255); }
+  50% { color: rgb(24, 187, 247); }
 }
+
+.section__text__p1 {
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--light-gray);
+}
+
 
 .home_title {
   text-align: center;
@@ -613,6 +621,19 @@ main {
   border-right: .15em solid orange; /* The typewriter cursor */
   animation: typing 5s, blink-caret .9s linear 12, cursor-stop 0s 5s forwards, color-change 8s infinite;
 }
+
+/* Styles for viewports less than 1200px wide */
+@media (max-width: 1200px) {
+  .home_title {
+    font-size: 10vw; /* Adjust as needed */
+    /* Add other styles as needed */
+  }
+  .section__text__p1 {
+    font-size: 4vw;
+  }
+  
+}
+
 
 /* The typing animation */
 @keyframes typing {
@@ -630,20 +651,6 @@ main {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
-
-.section__text__p1 {
-  font-size: 2vw;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--light-gray);
-}
-
-
-.title {
-  font-size: 5rem;
-  text-align: center;
-}
-
 
 
 /* BUTTONS */
