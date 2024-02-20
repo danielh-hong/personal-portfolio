@@ -2,10 +2,10 @@ particlesJS('particles-js',
   {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 120,  // Increase the number of particles
         "density": {
           "enable": true,
-          "value_area": 1000
+          "value_area": 1500  // Increase the density area to avoid crowding
         }
       },
       "color": {
@@ -27,4 +27,3 @@ particlesJS('particles-js',
     }
   }
 );
-
