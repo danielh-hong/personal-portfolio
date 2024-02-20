@@ -1164,7 +1164,7 @@ main {
     font-size: 12px;
     line-height: 1.4;
     overflow-y: auto;
-    max-height: 30vh; 
+    max-height: 25vh; 
   }
 }
 
