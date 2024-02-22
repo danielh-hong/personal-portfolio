@@ -331,6 +331,22 @@ article.active {
   overflow: hidden;
 }
 
+/* Star shape */
+.star::before {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Diamond shape */
+.diamond::before {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
+}
+
+/* Circle shape */
+.circle::before {
+  border-radius: 50%;
+}
+
+
 .click-effect::before {
   content: "";
   position: absolute;
@@ -616,18 +632,28 @@ main {
   white-space: nowrap;
   overflow: hidden; 
   border-right: .15em solid orange; /* The typewriter cursor */
-  background: linear-gradient(90deg, rgb(0, 226, 247), rgb(0, 255, 204), rgb(20, 180, 255), rgb(0, 115, 255), rgb(3, 204, 211));
-  background-size: 200% auto;
+  background: linear-gradient(90deg, rgb(0, 226, 247), rgb(0, 255, 204), 
+                            rgb(20, 180, 255), rgb(0, 115, 255), rgb(3, 204, 211), 
+                            rgb(0, 157, 255), rgb(0, 255, 242), rgb(38, 184, 225),
+                             rgb(0, 149, 255), rgb(0, 140, 200), rgb(0, 157, 177), rgb(8, 197, 140),
+                             rgb(0, 226, 247));
+  background-size: 800% auto; /* Increase to accommodate more colors */
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: typing 5s, blink-caret .9s linear 12, cursor-stop 0s 5s forwards, gradient 8s ease infinite;
+  animation: typing 5s, blink-caret .9s linear 12, cursor-stop 0s 5s forwards, gradient 60s linear infinite; /* Increase duration for smoother transitions */
 }
 
 @keyframes gradient {
   0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  12% { background-position: 100% 50%; }
+  25% { background-position: 200% 50%; }
+  37% { background-position: 300% 50%; }
+  50% { background-position: 400% 50%; }
+  62% { background-position: 500% 50%; }
+  75% { background-position: 600% 50%; }
+  87% { background-position: 700% 50%; }
+  100% { background-position: 800% 50%; }
 }
 
 /* Styles for viewports less than 1200px wide */
@@ -683,7 +709,7 @@ main {
 /* ! ! ! button styling ! ! !*/
 .btn-color-1 {
   border: none;
-  background: linear-gradient(to right, rgb(0, 128, 255), rgb(70, 131, 180)); /* Subtle blue gradient */
+  background: linear-gradient(to right, rgb(0, 149, 255), rgb(59, 133, 223)); /* Subtle blue gradient */
   color: white;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth easing */
   padding: 10px 20px;

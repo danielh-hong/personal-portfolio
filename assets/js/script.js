@@ -230,14 +230,16 @@ document.addEventListener('mousemove', function(e) {
 
 // Click effect for each click
 var colors = ['dodgerblue', 'deepskyblue', 'cyan', 'magenta', 'yellow', 'lime'];
+var shapes = ['star', 'diamond', 'circle']; // Add your shapes here
 
 document.addEventListener('click', function(e) {
   var color1 = colors[Math.floor(Math.random() * colors.length)];
   var color2 = colors[Math.floor(Math.random() * colors.length)];
   var color3 = colors[Math.floor(Math.random() * colors.length)];
+  var shape = shapes[Math.floor(Math.random() * shapes.length)];
 
   const effect = document.createElement('div');
-  effect.classList.add('click-effect');
+  effect.classList.add('click-effect', shape); // Add the shape class
   effect.style.top = `${e.clientY - 50}px`; // subtract half the width/height to center the effect
   effect.style.left = `${e.clientX - 50}px`; // subtract half the width/height to center the effect
 
