@@ -259,35 +259,47 @@ document.addEventListener('click', function(e) {
 });
 
 /* make height of home same as sidebar, and add birds vanta effect */
-window.onload = function() {
+var vantaEffect = null;
+
+function checkVanta() {
   var sidebar = document.querySelector('.sidebar');
   var home = document.querySelector('.home');
 
   if (window.matchMedia("(min-width: 1200px)").matches) {
     home.style.height = window.getComputedStyle(sidebar).height;
+
+    if (vantaEffect == null) {
+      vantaEffect = VANTA.BIRDS({
+        el: "#home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.0,
+        scaleMobile: 1.00,
+        color1: 0x431401,
+        color2: 0xff5a00,
+        backgroundColor: parseInt('1D1D1E', 16),
+        birdSize: 1.50,
+        wingSpan: 50.00,
+        quantity: 1.00,
+      });
+
+      var vantaCanvas = document.querySelector("#home canvas");
+      if (vantaCanvas) {
+        vantaCanvas.style.opacity = "0.6";
+      }
+    }
   } else {
     home.style.height = "70vh";
-  }
 
-  VANTA.BIRDS({
-    el: "#home",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.0,
-    scaleMobile: 1.00,
-    color1: 0x431401,
-    color2: 0xff5a00,
-    backgroundColor: parseInt('1D1D1E', 16),
-    birdSize: 1.50,
-    wingSpan: 19.00,
-    quantity: 1.00,
-  });
-
-  var vantaCanvas = document.querySelector("#home canvas");
-  if (vantaCanvas) {
-    vantaCanvas.style.opacity = "0.6";
+    if (vantaEffect != null) {
+      vantaEffect.destroy();
+      vantaEffect = null;
+    }
   }
-};
+}
+
+window.onload = checkVanta;
+window.addEventListener('resize', checkVanta);
