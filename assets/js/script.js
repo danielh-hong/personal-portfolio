@@ -297,7 +297,7 @@ function checkVanta() {
         color1: 0x431401,
         color2: 0xff5a00,
         backgroundColor: parseInt('1D1D1E', 16),
-        birdSize: 1.50,
+        birdSize: 2.50,
         wingSpan: 50.00,
         quantity: 1.00,
       });
