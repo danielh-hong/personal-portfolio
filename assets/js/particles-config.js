@@ -2,10 +2,10 @@ particlesJS('particles-js',
   {
     "particles": {
       "number": {
-        "value": 120,  // Increase the number of particles
+        "value": 40,
         "density": {
           "enable": true,
-          "value_area": 1500  // Increase the density area to avoid crowding
+          "value_area": 1000
         }
       },
       "color": {
@@ -22,6 +22,13 @@ particlesJS('particles-js',
           "size_min": 0.1,
           "sync": false
         }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 170, // Distance at which particles are linked
+        "color": "#ffffff", // Color of the links
+        "opacity": 0.4, // Opacity of the links
+        "width": 1 // Width of the links
       },
       // rest of config here
     }
