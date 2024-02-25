@@ -140,32 +140,46 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+document.addEventListener("DOMContentLoaded", function() {
+  // page navigation variables
+  const navigationLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function (event) {
-    event.preventDefault(); // prevent the default action
-
-    const targetId = this.getAttribute('href').substring(1); // remove the '#' symbol
-
+  // function to update active page and nav link
+  function updateActive(targetId) {
     for (let i = 0; i < pages.length; i++) {
       if (targetId === pages[i].id) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-
-        // update the hash part of the URL
-        window.location.hash = targetId;
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
     }
-  });
-}
+  }
+
+  // add event to all nav link
+  for (let i = 0; i < navigationLinks.length; i++) {
+    navigationLinks[i].addEventListener("click", function (event) {
+      event.preventDefault(); // prevent the default action
+
+      const targetId = this.getAttribute('href').substring(1); // remove the '#' symbol
+
+      // update the hash part of the URL
+      window.location.hash = targetId;
+
+      updateActive(targetId);
+    });
+  }
+
+  // check for hash in URL on page load
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    updateActive(hash);
+  } else {
+    updateActive(pages[0].id); // set the first page as active if there's no hash
+  }
+});
 
 // when the hash changes, update the active navigation link
 window.addEventListener("hashchange", function () {
@@ -258,6 +272,8 @@ document.addEventListener('click', function(e) {
   }, 1000);
 });
 
+
+
 /* make height of home same as sidebar, and add birds vanta effect */
 var vantaEffect = null;
 
@@ -301,5 +317,20 @@ function checkVanta() {
   }
 }
 
-window.onload = checkVanta;
-window.addEventListener('resize', checkVanta);
+
+// Get the home element
+const home = document.querySelector('.home');
+
+// Create a MutationObserver instance
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+      if (home.classList.contains('active')) {
+        checkVanta();
+      }
+    }
+  });
+});
+
+// Start observing the home element for attribute changes
+observer.observe(home, { attributes: true });
