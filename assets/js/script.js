@@ -258,17 +258,36 @@ document.addEventListener('click', function(e) {
   }, 1000);
 });
 
-/* make height of home same as sidebar */
+/* make height of home same as sidebar, and add birds vanta effect */
 window.onload = function() {
   var sidebar = document.querySelector('.sidebar');
   var home = document.querySelector('.home');
 
-  if (window.matchMedia("(min-width: 1200px)").matches) { // 768px is typically the breakpoint for mobile to tablet/desktop. Adjust as needed.
+  if (window.matchMedia("(min-width: 1200px)").matches) {
     home.style.height = window.getComputedStyle(sidebar).height;
   } else {
-    // Perform some other action for mobile view
-    home.style.height = "70vh"; // For example, reset the height to auto
+    home.style.height = "70vh";
   }
-}
 
+  VANTA.BIRDS({
+    el: "#home",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    scaleMobile: 1.00,
+    color1: 0x431401,
+    color2: 0xff5a00,
+    backgroundColor: parseInt('1D1D1E', 16),
+    birdSize: 1.50,
+    wingSpan: 19.00,
+    quantity: 1.00,
+  });
 
+  var vantaCanvas = document.querySelector("#home canvas");
+  if (vantaCanvas) {
+    vantaCanvas.style.opacity = "0.6";
+  }
+};
