@@ -186,7 +186,7 @@ window.addEventListener("hashchange", function () {
 
 let counter = 0;
 
-// Mouse particles effect
+// Mouse particles effect (trailing mouse effect)
 document.addEventListener('mousemove', function(e) {
   counter++;
 
@@ -228,9 +228,9 @@ document.addEventListener('mousemove', function(e) {
 
 
 
-// Click effect for each click
+// Click effect for each click (mouse click effect)
 var colors = ['dodgerblue', 'deepskyblue', 'cyan', 'magenta', 'yellow', 'lime'];
-var shapes = ['star', 'diamond', 'circle']; // Add your shapes here
+var shapes = ['diamond', 'circle']; // Add your shapes here
 
 document.addEventListener('click', function(e) {
   var color1 = colors[Math.floor(Math.random() * colors.length)];
