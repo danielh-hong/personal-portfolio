@@ -272,8 +272,6 @@ document.addEventListener('click', function(e) {
   }, 1000);
 });
 
-
-
 /* make height of home same as sidebar, and add birds vanta effect */
 var vantaEffect = null;
 
@@ -316,7 +314,6 @@ function checkVanta() {
     }
   }
 }
-
 
 // Get the home element
 const home = document.querySelector('.home');
