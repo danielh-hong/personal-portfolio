@@ -783,6 +783,17 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
+.dotted-line {
+  border: none;
+  border-top: 2px dashed #00000000; /* Change to the color you want */
+  color: #1f1e27;
+  background-color: #0b0729;
+  height: 1px;
+  width: 100%;
+}
+
+
+
 .about .article-title { margin-bottom: 15px; }
 
 .about-text {
@@ -1346,6 +1357,17 @@ main {
 
 .project-title,
 .project-category { margin-left: 10px; }
+
+
+
+/* added */
+.project-date {
+  margin-left: 10px;
+  color: #666;
+  font-size: 0.8em;
+}
+
+
 
 .project-title {
   color: var(--white-2);
@@ -1970,7 +1992,19 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
 }
+/* not in responsive thing; always apply */
+.about_img { 
+  width: 100%;
+  height: auto;
+}
 
+.about_list li {
+  list-style-type: disc; /* or 'circle' or 'square' */
+} 
+
+.about_list {
+  padding-left: 20px;
+}
 
 
 
