@@ -1356,7 +1356,7 @@ main {
 .project-item > a:hover img { transform: scale(1.1); }
 
 .project-title,
-.project-category { margin-left: 10px; }
+.project-category { margin-left: 10px; line-height: 1.3rem;}
 
 
 
@@ -1365,6 +1365,7 @@ main {
   margin-left: 10px;
   color: #666;
   font-size: 0.8em;
+  line-height: 1.3rem;
 }
 
 
