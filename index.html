@@ -1315,7 +1315,7 @@
 
             <!-- Aesthetic Stopwatch --> <!-- NOTE: ADD MULTIPLE CATEGORIES USING COMMA-->
             <li class="project-item active" data-filter-item data-category="web dev & design, engineering">
-              <a data-fancybox="aesthetic_stopwatch_2024" data-caption="
+              <a data-fancybox="gallery_aesthetic_stopwatch_2024" data-caption="
               The Aesthetic Stopwatch is a project that I worked on by myself to help  
               familiarize myself with web development and design. The stopwatch is simple, featuring 
               a customizable background, a start/stop button, and a reset button. 
@@ -1333,7 +1333,7 @@
                 <p class="project-category">Engineering</p>
               </a>
 
-              <a data-fancybox="aesthetic_stopwatch_2024" data-caption="
+              <a data-fancybox="gallery_aesthetic_stopwatch_2024" data-caption="
               Designing this stopwatch for me was a way to spread my wings and explore new
               technologies. Prior to this stopwatch I had never worked with web development, 
               and I had never worked with Javascript, HTML, and CSS. 
@@ -1375,7 +1375,7 @@
 
             <!-- Pendulum Project -->
             <li class="project-item active" data-filter-item data-category="papers">
-              <a data-fancybox data-type="iframe" data-src="./assets/other_files/pendulum_report.pdf" data-caption="This paper uses original data to analyze the swing of a pendulum." href="javascript:;">
+              <a data-fancybox="gallery-pendulum-project" data-type="iframe" data-src="./assets/other_files/pendulum_report.pdf" data-caption="This paper uses original data to analyze the swing of a pendulum." href="javascript:;">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1389,7 +1389,7 @@
 
             <!-- Model Mania 2019 -->
             <li class="project-item active" data-filter-item data-category="engineering">
-              <a data-fancybox data-caption="This is my first Solidworks project. It is a model
+              <a data-fancybox="gallery-model-mania" data-caption="This is my first Solidworks project. It is a model
               of the 2019 Model Mania design challenge." href="./assets/images/project_thumbnails/model_mania_thumbnail.png">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1405,7 +1405,7 @@
 
             <!-- Legend of Pakicetus Video Link-->
             <li class="project-item active" data-filter-item data-category="videos">
-              <a data-fancybox data-caption="
+              <a data-fancybox="gallery-legend-of-pakicetus-video" data-caption="
               The Legend of Pakicetus is an animated short film that I created in 2023. I made it 
               using after effects for the animations, illustrator for the graphics, photoshop for the 
               photo editing, premiere pro for the video editing, and media encoder for the final render.
@@ -1425,7 +1425,7 @@
 
             <!-- The Perception of Pain-->
             <li class="project-item active" data-filter-item data-category="videos">
-              <a data-fancybox data-caption="
+              <a data-fancybox="gallery-perception-of-pain-video" data-caption="
               Nociception is a video I made for the Junior Breakthrough Challenge in 2021. It is an
               mixed-medium, animated video about how pain is perceived by the body. I made it 
               using illustrator, photoshop, after effects, and premiere pro. The video came
@@ -1444,7 +1444,7 @@
 
             <!-- Biking-->
             <li class="project-item active" data-filter-item data-category="videos">
-              <a data-fancybox data-caption="
+              <a data-fancybox="gallery-biking-video" data-caption="
               Biking - The Best Form of Transportation is a video I made back in 2022. It is a
               mixed-medium, animated video that uses recorded footage, animations, and stock footage.
               I truly believe that biking is the best form of transportation, and try to bike 
@@ -1464,7 +1464,7 @@
 
             <!-- Peto's Paradox -->
             <li class="project-item active" data-filter-item data-category="videos">
-              <a data-fancybox data-caption="
+              <a data-fancybox="gallery-petos-paradox-video" data-caption="
               Peto's Paradox is a video I made in 2020 for the Junior Breakthrough Challenge. 
               During this time, I was fascinated by biology, and especially curious about
               the inner workings of cancer. Inspired by Kurzegasgt, I decided
@@ -1485,7 +1485,7 @@
 
             <!-- Excavator Project Link-->
             <li class="project-item active" data-filter-item data-category="videos">
-              <a data-fancybox data-caption=
+              <a data-fancybox="gallery-excavator-video" data-caption=
               "This is my first Engineering Project Ever, and holds a very dear spot in my heart.
               Made in 5th grade, I still remember the joy after seeing my creation work for the first time.
               Other than the hydraulics, the excavator is completely made of recycled materials,
@@ -1503,7 +1503,7 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="web dev & design">
-              <a data-fancybox data-caption="
+              <a data-fancybox="gallery-personal-website" data-caption="
               You are currently on my personal website! The website is made with HTML, CSS, and Javascript.
               I used the particles.js library for the interactive background,
               FancyBox library for the video display popups, and simple javascript code for the mouse and click
@@ -1718,6 +1718,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 
+  <script>
+    $("[data-fancybox]").fancybox({
+      afterClose: function() {
+        window.location.href = '/#portfolio';
+        window.location.reload(true);
+
+      }
+    });
+    </script>
 </body>
 
 </html>
