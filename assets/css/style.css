@@ -2207,8 +2207,8 @@ main {
   .sidebar {
     position: sticky;
     top: 60px;
-    max-height: 90vh;
-    height: 90vh;
+    max-height: 85vh;
+    height: 85vh;
     margin-bottom: 0;
     padding-top: 4%;
     margin-right: 0;
@@ -2273,7 +2273,7 @@ main {
 
     grid-template-columns: 1fr; 
     overflow-y: auto; /* Enables vertical scrolling */
-    max-height:35vh; /* Example: 50% of the sidebar's max-height */
+    max-height:40vh; /* Example: 50% of the sidebar's max-height */
   
   }
 
@@ -2283,7 +2283,7 @@ main {
     }
 
     .contacts-list::-webkit-scrollbar-track {
-      background: transparent;
+      background:rgba(0, 0, 0, 0.5);
     }
 
     .contacts-list::-webkit-scrollbar-thumb {
