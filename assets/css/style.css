@@ -407,8 +407,18 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
+  width: 20%;
+  height: 20%;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.avatar-box img {
+  display: block; /* Ensures the image is a block-level element, allowing width and height to be set */
+  width: 100%; /* Makes the image width equal to that of its container */
+  height: 100%; /* Makes the image height equal to that of its container */
+  object-fit: cover; /* Ensures the image covers the area without distorting its aspect ratio */
+  object-position: center; /* Centers the image within the container */
 }
 
 
